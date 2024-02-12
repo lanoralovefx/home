@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
+
+ 
+
+html, body {
+    cursor: url('../img/pastel-planets/precision\ planet\ cursor.cur planet cursor.cur'), auto;
+    cursor: url('../img/pastel-planets/text\ planet\ cursor.cur'), text;
+    margin: 100px;
+    padding: 0;
+    background-color: rgb(235, 222, 224);
+    max-width: 800px;
+    max-height: 200px;
+    width: 800px;
+    height: 200px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.backgroundimg {
+    background-image: url('../img/backgound.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: 58px 73px 78px 78px  rgb(235, 222, 224) inset;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.333);
+    border-radius: 150px;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color:(rgb(235, 222, 224));
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent,rgb(130, 89, 133));
+}
+
+/*important styles */
+a,button {
+    cursor: url("../img/pastel-planets/link\ planet\ cursor.cur"), auto;
+   }
+
+h1 {
+    color:rgb(255, 249, 250);
+    font-size: 45px;
+    padding-bottom: 5px;
+}
+h2 {
+    color:rgb(231, 168, 178);
+    text-shadow: 36,-96,4;
+    
+}
+
+/*nav */
+
+.navbar {
+    float:left;
+    display: flex;
+    flex-direction: column;
+}
+.navbar a {
+    text-decoration: none;
+    color:rgb(231, 168, 178);
+    font-size: 10px;
+
+}
+
+.navbar a:hover {
+    color: #fff;
+    font-size: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 40;
+    font-style: normal;
+}
+button {
+    border: 0px;
+    width: 100px;
+    padding: auto;
+    margin: auto;
+    background-color: #fff;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 6;
+    background-color: rgb(235, 222, 224);
+}
+
+img {
+    max-width:600px;
+}
+
+
+.header {
+     grid-area: header; 
+     font-family: "Euphoria Script", cursive;
+     font-weight: 400;
+     font-style: normal;
+     text-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar {
+     grid-area: menu; 
+}
+
+/* about me css */
+
+.about {
+     grid-area: main; 
+     font-size: 14px;
+     overflow-y: scroll;
+     height: 100px;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable both-edges;
+      
+}
+.portfolioscroll {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.about2 { 
+    grid-area: right; 
+}
+
+.about2 img {
+    display: inline-block;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* moon */
+
+.moon {
+  position: absolute;
+  bottom: -140px;
+  right: -170px;
+  z-index: 10;
+  transform-origin: center;
+}
+
+.moon img:hover {
+  animation: shake 2.5s linear infinite alternate;
+}
+
+.shake {
+  -webkit-animation-name: shake ;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  0%, 1000% {
+    transform: rotate(-10deg);
+}
+10% {
+    transform: rotate(45deg);
+}
+20%,
+40% {
+    transform: rotate(-45deg);
+}
+}
+
+/* clouds */
+.clouds img {
+  position: absolute;
+  bottom: 150px;
+  right: 100px;
+  z-index: -1;
+  transform-origin: center;
+  opacity: 0.5;
+  transform: scale(1.333)
+
+}
+
+/* footer css */
+.footer { 
+    grid-area: footer; 
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 10px;
+
+}
+
+.footer a:hover {
+  color:rgb(231, 168, 178);
+  font-size: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 40;
+  font-style: normal;
+}
+/*grid container css */
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
+  }
+  .grid-container > div {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  b {
+    text-decoration: underline dotted;size: .1px;
+    color:rgb(209, 97, 142);
+  }
+
+  div.about2 {
+    align-content: center;
+    overflow-y: scroll;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.about2 img {
+    padding: 0px;
+  }
+
+/* responsive css */
+/* TABLET SCREEN*/
+
+  @media screen and (max-width: 800px) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-content: baseline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    html, body {
+      max-width: 400px;
+      max-height: 200px;
+      transition: width 5s;
+      transition-timing-function: ease;
+  }
+  .header {
+    text-align: center;
+  }
+
+  .marquee span {
+    display: inline-block;
+    animation: marquee 2s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
+  /* moon and its animations */
+  .moon {
+    position: absolute;
+    bottom: -200px;
+    right: -300px;
+    z-index: 10;
+    transform: scale(0.8);
+  }
+  
+  .about {
+    height:100px;
+  }
+  .clouds img {
+    width: 250px;
+    position: absolute;
+    bottom: 160px;
+    right: 15.75px;
+    z-index: 0;
+    transform-origin: center;
+    opacity: 0.5;
+    transform: scale(1.333);
+  
+  }
+  button {
+    border: 0px;
+    width: 300px;
+    padding: auto;
+    margin: auto;
+}
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+
+    /* grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px; */
+  }
+  .grid-container > div {
+    padding: 10px 0;
+    font-size: 12px;
+  } 
+  }
+
+/* MOBILLE DEVICES */
+
+  @media (max-width: 480px) {
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-content: baseline;
+      width: 480px;
+    }
+    html, body {
+      cursor: url('../img/pastel-planets/precision\ planet\ cursor.cur planet cursor.cur'), auto;
+      cursor: url('../img/pastel-planets/text\ planet\ cursor.cur'), text;
+      background-color: rgb(235, 222, 224);
+      margin:auto;
+      margin-left:0px;
+      margin-right: 0px;
+      padding-top: 35px;
+      max-width: 480px;
+      max-height: 1200px;
+      width: 480px;
+      height: 1000px;
+      font-family: "Pixelify Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
+      overflow: scroll;
+      overflow-x: hidden;
+  }
+
+  .header {
+    text-align: center;
+    text-shadow: #000;
+    padding: 2px;
+
+  }
+
+  .marquee span {
+    display: inline-block;
+    animation: marquee 2.0s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
+  /* moon and its animations */
+  .moon {
+    position: absolute;
+    bottom: -100px;
+    right: -150px;
+    z-index: 10;
+    transform: scale(0.4);
+  }
+  
+  .about {
+    padding: auto;
+    margin: auto;
+    width: 300px;
+    height:200px;
+  }
+  .portfolioscroll {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding: auto;
+  }
+  .about2 {
+    padding: auto;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+  }
+  .about2 img {
+    display:inline-block;
+    max-width: 100px;
+    max-height: 100px;
+}
+  
+  .clouds img {
+    width: 320px;
+    position: absolute;
+    bottom: 160px;
+    right: 15.75px;
+    z-index: 0;
+    transform-origin: center;
+    opacity: 0.5;
+    transform: scale(1.333);
+  
+  }
+  button {
+    border: 0px;
+    width: 320px;
+    padding: auto;
+    margin: auto;
+}
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+
+    /* grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px; */
+  }
+  .grid-container {
+    padding: 0px 0;
+
+    font-size: 12px;
+  } 
+  
+}
+  /* marquee effect practice from stackoverflow */
+  .marquee {
+    width: 700px;
+    overflow-x:hidden;
+    box-sizing: border-box;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    /* show the marquee just outside the paragraph */
+    will-change: transform;
+    animation: marquee 21s linear infinite alternate;
+  }
+  
+  .marquee img:hover {
+    width: 200%;
+    height: 200%;
+   }
+  .marquee span:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20%, 0); }
+  }
+  
+  
+  /* Respect user preferences about animations */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee span {
+      animation-iteration-count: 100;
+      animation-duration: 10s; 
+      /* instead of animation: none, so an animationend event is 
+       * still available, if previously attached.
+       */
+      width: auto;
+      padding-left: 0;
+    }
+  }
+  
+
+  /* personal notes and issues --- 
+ • scoll bar color change */
